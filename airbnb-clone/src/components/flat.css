@@ -1,0 +1,39 @@
+:root {
+	--card-width: 300px;
+	--picture-height: 200px;	
+	--font-size: 0.75rem;	
+}
+
+@media screen and (min-width: 768px) {
+
+	.flat {
+		--card-width: 400px;
+	}
+	.flat-picture {
+		--picture-height: 250px;
+	}
+	.flat-title {
+		--font-size: 1rem;
+	}
+}
+
+.flat {
+	margin: var(--card-margin);
+	margin: 10px;
+	box-shadow: 0px 0px 15px #888888;
+	padding: 10px;
+}
+
+.flat-picture {
+	height: var(--picture-height);
+	width: var(--card-width);
+	background-size: cover;
+	background-position: center;
+}
+
+.flat-title {
+	margin-top: 0.5rem;
+	width: var(--card-width);
+	font-size: var(--font-size);
+	overflow-wrap: wrap;
+}

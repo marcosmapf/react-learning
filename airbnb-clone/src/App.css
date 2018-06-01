@@ -1,0 +1,89 @@
+:root {
+  --map-height: 30vh;
+}
+
+.app {
+  display: grid;
+  grid-template-areas:  "main"
+                        "map";
+} 
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+}
+
+.flats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.map {
+  grid-area: map;
+  flex-grow: 1;
+  position: sticky;
+  bottom: 0;
+  height: var(--map-height);
+}
+
+@media screen and (min-width: 780px) {
+
+  /*Change grid so that the map is displayed 
+  on the  right side of the screen*/
+
+  .map {
+    --map-height: 100vh;
+  }
+
+  .app {
+    display: grid;
+    grid-template-areas:  "main map";
+    grid-template-columns: 60% 40%;
+  }
+
+  .main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .map {
+    grid-area: map;
+    flex-grow: 1;
+    position: sticky;
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 440px) and (max-width: 679px) {
+  .flat {
+    --card-width: 400px;
+  }
+  .flat-picture {
+    --picture-height: 250px;
+  }
+  .flat-title {
+    --font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1466px) {
+  
+  .flat  {
+    --card-width: 300px !important;
+  }
+  .flat-picture {
+    --picture-height: 200px !important;
+  }
+  .flat-title {
+    --font-size: 0.75rem !important;
+  }
+}
